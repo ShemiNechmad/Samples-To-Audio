@@ -18,7 +18,6 @@ export class AppComponent {
   initiateAudioContext() {
     this.ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
     let arrayBuffer = this.ctx.createBuffer(1, 44100, 44100);
-    console.log(this.ctx.sampleRate);
     let nowBuffering = arrayBuffer.getChannelData(0);
     let currentBuffer = 1;
     let direction = 'down';
