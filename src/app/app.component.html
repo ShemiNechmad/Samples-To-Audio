@@ -1,5 +1,6 @@
 <div class="body">
   <div class="header">
-    <button (click)="play()">Play</button>
+    <button *ngIf="bufferData && bufferData.length > 0" (click)="play()">Play</button>
+    {{message}}
   </div>
 </div>
